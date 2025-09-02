@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# Movie Explorer – Discover Your Favorite Films
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[https://new-movie-explorer.netlify.app/]
 
-## Available Scripts
+A modern, responsive React application that allows users to discover trending movies, search for specific films, view detailed information, and save favorites. This application integrates with The Movie Database (TMDb) API to provide real-time movie data.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✅ 1️⃣ Install prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Before starting, make sure you have:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Node.js** installed (LTS version, e.g., 18.x or 20.x)
+- **npm** (comes with Node.js) or **yarn**
+- **Git** installed
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🎬 Features
 
-### `npm run build`
+- 🔐 **User Login:** Simple username/password login with credentials stored in localStorage.
+- 🌟 **Trending Movies:** Display trending movies of the week from TMDb on the homepage.
+- 🌟 **Search & Filters:** Search movies by title, filter by genre, release year, and minimum rating.
+- 🎞️ **Movie Details:** View detailed info, including poster, trailer, cast, director, runtime, budget, and genres.
+- ❤️ **Favorites:** Add/remove movies to a favorites list, persisted in localStorage.
+- 💡 **Light/Dark Mode:** Toggle between light and dark themes, saved in localStorage.
+- 📱 **Responsive Design:** Fully responsive layout for mobile, tablet, and desktop.
+- 🛑 **Error Handling:** Graceful handling of API errors and invalid routes with a 404 page.
+- 🔁 **Lazy Loading:** Pages are lazy-loaded to improve initial load performance.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠️ Technologies Used
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **React** (with Context API)
+- **React Router**
+- **Material UI**
+- **Axios**
+- **TMDb API**
+- **Lucide React** (icons)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📦 Project Structure
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+src/
+├── components/          # Reusable UI components
+├── context/             # React Context for state management
+├── pages/               # Page components
+├── services/            # API integration
+├── App.jsx              # Main app component and routing
+└── index.js             # Application entry point
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ⚙️ Installation and Setup
 
-## Learn More
+1. **Clone the repository**
+   ```bash
+   git clone <your-repo-url>
+   cd movie-explorer
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Create environment variables**
 
-### Code Splitting
+   Create a `.env` file in the root directory:
+   ```
+   REACT_APP_TMDB_API_KEY=your_api_key_here
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+4. **Start the development server**
+   ```bash
+   npm start
+   ```
 
-### Analyzing the Bundle Size
+5. **Build for production**
+   ```bash
+   npm run build
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🔄 API Integration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This application uses the TMDb API to fetch movie data. You must provide your own TMDb API key in the `.env` file.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 💾 State Management
 
-### Deployment
+The application uses React's Context API for global state (movies, favorites, filters, theme, etc.).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🔒 Authentication
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Simple login system that stores the username in localStorage. (For demo purposes only.)
+
+---
+
+## 📱 Responsive Design
+
+Mobile-first, responsive layout using Material UI.
+
+---
+
+## 🙏 Acknowledgments
+
+- [The Movie Database (TMDb)](https://www.themoviedb.org/) for the API
+- [Material-UI](https://mui.com/) for UI components
+- [Lucide React](https://lucide.dev/) for icons
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License.
